@@ -12,6 +12,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { catchError, Observable, of } from 'rxjs';
 import { Product } from '../../interfaces/product';
 import { ProductService } from '../../services/product.service';
+import { MatProgressSpinner } from "@angular/material/progress-spinner";
+import { AppShellRenderDirective } from '../../directives/app-shell-render.directive';
+import { AppShellNoRenderDirective } from '../../directives/app-shell-no-render.directive';
 
 @Component({
   selector: 'app-product-detail',
@@ -25,8 +28,11 @@ import { ProductService } from '../../services/product.service';
     MatCheckboxModule,
     MatButtonModule,
     MatIcon,
-    RouterLink
-  ],
+    RouterLink,
+    MatProgressSpinner,
+    AppShellRenderDirective,
+    AppShellNoRenderDirective 
+],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })

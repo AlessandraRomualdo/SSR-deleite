@@ -6,9 +6,14 @@
     <span class="back-text">Detalhes do produto</span>
   </div>
 
+  <div class="loading-placeholder" *AppShellRenderDirective>
+    <mat-spinner></mat-spinner>
+    <p>Carregando produtos ...</p>
+  </div>
+
   @if (product$ | async; as product) {
   <div class="content">
-    <div class="product-image">
+    <div class="product-image" *AppShellNoRenderDirective>
       <img [src]="product.imageDetails" alt="{{ product.title }}">
     </div>
 
